@@ -1,15 +1,17 @@
 'use strict';
 const numList = [-5, 28, 98, -20013, 0.7878, 22, 115];
 
-max (numbers){
-  let i = 0;
-  while (numbers[i] <= numbers.length){
+function max (numbers){
+  let i = numbers[0];
+  let currentMax = 0;
+  while (i < numbers.length){
     i++;
+    if (numbers[i] > currentMax) {
+      currentMax = numbers[i];
+    }
   }
+  console.log(currentMax);
+  return currentMax;
 }
+max(numList);
 
-min (numbers) {
-  while (){
-    
-  }
-}
