@@ -2,7 +2,7 @@
 const numList = [-5, 28, 98, -20013, 0.7878, 22, 115];
 
 function max (numbers){
-  let i = numbers[0];
+  let i = 0;
   let currentMax = 0;
   while (i < numbers.length){
     i++;
@@ -16,7 +16,7 @@ function max (numbers){
 max(numList);
 
 function min (numbers) {
-  let i = numbers[0];
+  let i = 0;
   let currentMin = 0;
   while (i < numbers.length) {
     i++;
@@ -28,3 +28,14 @@ function min (numbers) {
   return currentMin;
 }
 min(numList);
+
+function average(numbers) {
+  let i = 0;
+  let sum = 0; 
+  numbers.forEach(function(element){
+    sum = sum + element;
+  });
+  console.log(sum / numbers.length);
+  return sum / numbers.length;
+}
+average(numList);
