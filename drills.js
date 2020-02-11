@@ -15,3 +15,16 @@ function max (numbers){
 }
 max(numList);
 
+function min (numbers) {
+  let i = numbers[0];
+  let currentMin = 0;
+  while (i < numbers.length) {
+    i++;
+    if (numbers[i] < currentMin) {
+      currentMin = numbers[i];
+    }
+  }
+  console.log(currentMin);
+  return currentMin;
+}
+min(numList);
