@@ -1,4 +1,6 @@
 'use strict';
+
+//https://courses.thinkful.com/js-v1/checkpoint/12
 function createMyObject() {
   return {
     foo: 'bar',
@@ -26,3 +28,16 @@ function updateObject(obj){
 }
 let newObj = updateObject(oldObj);
 console.log(newObj);
+
+function personMaker() {
+  const person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    // why isn't this working
+    fullName: function(){
+      return this.firstName + ' ' + this.lastName;
+    }
+  };
+  return person;
+}
+console.log(personMaker());
